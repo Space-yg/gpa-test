@@ -1,0 +1,114 @@
+/** Other **/
+* {
+    margin: auto;
+}
+body {
+    font-size: large;
+}
+
+/** Classes **/
+.text-align-left {
+    text-align: left;
+}
+
+/** Grades **/
+div.grades {
+    display: grid;
+}
+
+/** CGPA **/
+table#cgpa {
+    text-align: center;
+}
+
+/** Table **/
+table {
+    border-collapse: collapse;
+}
+table td:has(table) {
+    vertical-align: top;
+}
+table table tr,
+table table tbody,
+table table tbody td {
+    border: 0;
+}
+/* Head */
+thead tr {
+    border: 1px solid black;
+}
+table table thead th:first-child {
+    text-align: left;
+}
+table table thead {
+    border-bottom: 1px solid black;
+}
+/* Body */
+tbody {
+    border: 1px solid black;
+}
+td, th {
+    padding: 10px;
+}
+td:has(table) {
+    padding: 0;
+}
+table tbody td {
+    border: 1px solid black;
+}
+
+/** Select **/
+table select {
+    font: inherit;
+    width: 71px;
+    text-align: center;
+    height: 25px;
+}
+table select:focus {
+    border: none;
+}
+table table td:first-child select {
+    width: 105%;
+    text-align: left;
+    background-color: transparent;
+    border: none;
+    margin-left: -3px;
+}
+
+/** Input **/
+input[type="checkbox"] {
+    width: 20px;
+}
+input {
+    width: 70px;
+    padding: 0;
+    text-align: center;
+    font: inherit;
+}
+
+/** Button **/
+thead button {
+    border: none;
+    background-color: transparent;
+    padding: 0 6px;
+}
+thead button#selected {
+    text-decoration: underline;
+}
+button {
+    font: inherit;
+}
+button:hover {
+    cursor: pointer;
+}
+
+/* Grades */
+col.grades {
+    background-color: rgba(0, 128, 0, 0.2);
+}
+
+/* GPA */
+col.gpa {
+    background-color: rgba(128, 0, 0, 0.2);
+    border: 1px solid black;
+}

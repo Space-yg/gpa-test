@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="styles.css">
+        <title>CIS GPA Calculator</title>
+    </head>
+    <body>
+        <!-- Mode -->
+        <label>Mode: </label>
+        <select id="mode">
+            <option value="report card" selected>Report Card</option>
+            <option value="transcript">Transcript</option>
+        </select>
+        <br>
+
+        <!-- Year -->
+        <label>Year</label>
+        <select id="year">
+            <option selected value="2023">2023</option>
+            <option value="2022">2022</option>
+            <option value="2021">2021</option>
+            <option value="2020">2020</option>
+        </select>
+        <br>
+
+        <!-- Grades Select Menu -->
+        <label>Grade: </label>
+        <select id="gradesLevels"></select>
+        <br>
+
+        <!-- Grades -->
+        <div style="grid-template-columns: 1fr;" class="grades" id="grades"></div>
+        <br>
+
+        <!-- CGPA -->
+        <table id="cgpa">
+            <thead>
+                <tr>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>CGPA: 4.00</td></tr>
+            </tbody>
+        </table>
+        <br>
+
+        <!-- GPA Scale -->
+        <table>
+            <thead>
+                <tr><th colspan="3">GPA Scale</th></tr>
+                <tr>
+                    <th>Letter</th>
+                    <th>GPA</th>
+                    <th>Percentage</th>
+                </tr>
+            </thead>
+            <tbody id="keys"></tbody>
+        </table>
+    </body>
+    <script type="module" src="dir/index.js"></script>
+</html>

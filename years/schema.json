@@ -1,0 +1,120 @@
+{
+    "$schema": "http://json-schema.org/schema",
+    "title": "Year",
+    "description": "The subjects and the grade's key of a year",
+    "type": "object",
+    
+    "additionalProperties": false,
+    "required": ["$schema", "grade levels", "gpa scale"],
+    "properties": {
+        "$schema": {
+            "description": "The schema to verify this document against.",
+            "type": "string"
+        },
+
+        "grade levels": {
+            "description": "The grade levels in a school year.",
+            "type": "object",
+
+            "additionalProperties": false,
+            "patternProperties": {
+                "^\\d+$": {
+                    "title": "A Grade",
+                    "type": "array",
+
+                    "items": {
+                        "title": "A Semester",
+                        "description": "An array with the subjects or a string of another semester's index",
+                        "type": ["array", "string"],
+                        "pattern": "^\\d$",
+                        "default": [
+                            {
+                                "": {
+                                    "credits": 1
+                                }
+                            }
+                        ],
+
+                        "uniqueItems": true,
+                        "items": {
+                            "title": "A Subject Slot",
+                            "type": "object",
+            
+                            "additionalProperties": false,
+                            "patternProperties": {
+                                "^.*$": {
+                                    "title": "A Subject",
+                                    "type": "object",
+                        
+                                    "required": ["credits", "type"],
+                                    "additionalProperties": false,
+                                    "properties": {
+                                        "credits": {
+                                            "description": "The amount credits",
+                                            "type": "number",
+                                            "default": 1
+                                        },
+                                        "type": {
+                                            "description": "The type of the course. This only affects the weighted GPA.",
+                                            "type": "string",
+                                            "default": "regular",
+                                            "enum": [
+                                                "regular",
+                                                "honers",
+                                                "ap",
+                                                "ib",
+                                                "college"
+                                            ]
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+
+        "gpa scale": {
+            "title": "Grade's Key",
+            "description": "The garde's key of the school",
+            "type": "array",
+            
+            "uniqueItems": true,
+            "items": {
+                "title": "A Grade",
+                "type": "object",
+
+                "required": ["letter", "gpa", "percentage"],
+                "properties": {
+                    "letter": {
+                        "title": "Letter Grade",
+                        "type": "string"
+                    },
+                    "gpa": {
+                        "title": "GPA",
+                        "type": "number",
+                        "minimum": 0
+                    },
+                    "percentage": {
+                        "title": "Percentage",
+                        "type": "object",
+
+                        "required": ["min"],
+                        "properties": {
+                            "max": {
+                                "title": "Maximum Percentage",
+                                "type": "integer"
+                            },
+                            "min": {
+                                "title": "Minimum Percentage",
+                                "type": "integer",
+                                "minimum": 0
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,383 @@
+{
+    "$schema": "./schema.json",
+
+    "grade levels": {
+        "9": [
+            [
+                {
+                    "English": {
+                        "credits": 0.5,
+                        "type": "regular"
+                    }
+                },
+                {
+                    "Math": {
+                        "credits": 0.5,
+                        "type": "regular"
+                    }
+                },
+                {
+                    "Science": {
+                        "credits": 0.5,
+                        "type": "regular"
+                    }
+                },
+                {
+                    "Social Studies": {
+                        "credits": 0.5,
+                        "type": "regular"
+                    }
+                },
+                {
+                    "German": {
+                        "credits": 0.5,
+                        "type": "regular"
+                    },
+                    "French": {
+                        "credits": 0.5,
+                        "type": "regular"
+                    },
+                    "Spanish": {
+                        "credits": 0.5,
+                        "type": "regular"
+                    }
+                },
+                {
+                    "Physical Education": {
+                        "credits": 0.25,
+                        "type": "regular"
+                    }
+                }
+            ],
+            "0"
+        ],
+        "10": [
+            [
+                {
+                    "English": {
+                        "credits": 0.5,
+                        "type": "regular"
+                    }
+                },
+                {
+                    "Math": {
+                        "credits": 0.5,
+                        "type": "regular"
+                    }
+                },
+                {
+                    "Chemistry": {
+                        "credits": 0.5,
+                        "type": "regular"
+                    }
+                },
+                {
+                    "Social Studies": {
+                        "credits": 0.5,
+                        "type": "regular"
+                    }
+                },
+                {
+                    "German": {
+                        "credits": 0.5,
+                        "type": "regular"
+                    },
+                    "French": {
+                        "credits": 0.5,
+                        "type": "regular"
+                    },
+                    "Spanish": {
+                        "credits": 0.5,
+                        "type": "regular"
+                    }
+                },
+                {
+                    "Physical Education": {
+                        "credits": 0.25,
+                        "type": "regular"
+                    }
+                }
+            ],
+            "0"
+        ],
+        "11": [
+            [
+                {
+                    "English": {
+                        "credits": 0.5,
+                        "type": "regular"
+                    }
+                },
+                {
+                    "Math": {
+                        "credits": 0.5,
+                        "type": "regular"
+                    }
+                },
+                {
+                    "Physics": {
+                        "credits": 0.5,
+                        "type": "regular"
+                    }
+                },
+                {
+                    "Media": {
+                        "credits": 0.5,
+                        "type": "regular"
+                    },
+                    "Business": {
+                        "credits": 0.5,
+                        "type": "regular"
+                    },
+                    "Political Science": {
+                        "credits": 0.5,
+                        "type": "regular"
+                    },
+                    "Psychology": {
+                        "credits": 0.5,
+                        "type": "regular"
+                    }
+                },
+                {
+                    "Architecture": {
+                        "credits": 0.5,
+                        "type": "regular"
+                    },
+                    "Business": {
+                        "credits": 0.5,
+                        "type": "regular"
+                    },
+                    "Economics": {
+                        "credits": 0.5,
+                        "type": "regular"
+                    },
+                    "French": {
+                        "credits": 0.5,
+                        "type": "regular"
+                    },
+                    "German": {
+                        "credits": 0.5,
+                        "type": "regular"
+                    },
+                    "Spanish": {
+                        "credits": 0.5,
+                        "type": "regular"
+                    }
+                },
+                {
+                    "Computer Science": {
+                        "credits": 0.5,
+                        "type": "regular"
+                    },
+                    "Business": {
+                        "credits": 0.5,
+                        "type": "regular"
+                    },
+                    "Sociology": {
+                        "credits": 0.5,
+                        "type": "regular"
+                    }
+                },
+                {
+                    "Physical Education": {
+                        "credits": 0.25,
+                        "type": "regular"
+                    }
+                }
+            ],
+            "0"
+        ],
+        "12": [
+            [
+                {
+                    "English": {
+                        "credits": 0.5,
+                        "type": "regular"
+                    },
+                    "AP English": {
+                        "credits": 0.5,
+                        "type": "ap"
+                    }
+                },
+                {
+                    "Calculus": {
+                        "credits": 0.5,
+                        "type": "regular"
+                    },
+                    "AP Calculus": {
+                        "credits": 0.5,
+                        "type": "ap"
+                    },
+                    "Business Math": {
+                        "credits": 0.5,
+                        "type": "regular"
+                    },
+                    "Accounting": {
+                        "credits": 0.5,
+                        "type": "regular"
+                    }
+                },
+                {
+                    "Business": {
+                        "credits": 0.5,
+                        "type": "regular"
+                    },
+                    "AP Physics": {
+                        "credits": 0.5,
+                        "type": "ap"
+                    },
+                    "Architecture": {
+                        "credits": 0.5,
+                        "type": "regular"
+                    },
+                    "Biology": {
+                        "credits": 0.5,
+                        "type": "regular"
+                    }
+                },
+                {
+                    "Advanced Chemistry": {
+                        "credits": 0.5,
+                        "type": "regular"
+                    },
+                    "Advanced Computer Science": {
+                        "credits": 0.5,
+                        "type": "regular"
+                    },
+                    "Business Math": {
+                        "credits": 0.5,
+                        "type": "regular"
+                    },
+                    "US History": {
+                        "credits": 0.5,
+                        "type": "regular"
+                    }
+                },
+                {
+                    "Art": {
+                        "credits": 0.5,
+                        "type": "regular"
+                    },
+                    "AP Art": {
+                        "credits": 0.5,
+                        "type": "ap"
+                    },
+                    "AP Psychology": {
+                        "credits": 0.5,
+                        "type": "ap"
+                    },
+                    "Environmental Science": {
+                        "credits": 0.5,
+                        "type": "regular"
+                    },
+                    "Graphic Design": {
+                        "credits": 0.5,
+                        "type": "regular"
+                    }
+                },
+                {
+                    "Physical Education": {
+                        "credits": 0.25,
+                        "type": "regular"
+                    }
+                }
+            ],
+            "0"
+        ]
+    },
+    
+    "gpa scale": [
+        {
+            "letter": "A+",
+            "gpa": 4,
+            "percentage": {
+                "max": 100,
+                "min": 97
+            }
+        },
+        {
+            "letter": "A",
+            "gpa": 4,
+            "percentage": {
+                "min": 93
+            }
+        },
+        {
+            "letter": "A-",
+            "gpa": 3.9,
+            "percentage": {
+                "min": 90
+            }
+        },
+        {
+            "letter": "B+",
+            "gpa": 3.7,
+            "percentage": {
+                "min": 87
+            }
+        },
+        {
+            "letter": "B",
+            "gpa": 3.4,
+            "percentage": {
+                "min": 83
+            }
+        },
+        {
+            "letter": "B-",
+            "gpa": 3,
+            "percentage": {
+                "min": 80
+            }
+        },
+        {
+            "letter": "C+",
+            "gpa": 2.7,
+            "percentage": {
+                "min": 77
+            }
+        },
+        {
+            "letter": "C",
+            "gpa": 2.4,
+            "percentage": {
+                "min": 73
+            }
+        },
+        {
+            "letter": "C-",
+            "gpa": 2,
+            "percentage": {
+                "min": 70
+            }
+        },
+        {
+            "letter": "D+",
+            "gpa": 1.7,
+            "percentage": {
+                "min": 67
+            }
+        },
+        {
+            "letter": "D",
+            "gpa": 1.4,
+            "percentage": {
+                "min": 63
+            }
+        },
+        {
+            "letter": "D-",
+            "gpa": 1,
+            "percentage": {
+                "min": 60
+            }
+        },
+        {
+            "letter": "F",
+            "gpa": 0,
+            "percentage": {
+                "min": 0
+            }
+        }
+    ]
+}

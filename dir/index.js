@@ -1,14 +1,14 @@
 import { createGrade } from "./create.js";
 import { calculateCGPA, changeTranscript } from "./calculate.js";
 const year = document.querySelector("select#year");
-const json = await (await fetch(`../years/${year.value}.json`)).json();
+const json = await (await fetch(`./years/${year.value}.json`)).json();
 year.addEventListener("change", async () => {
     await changeYear(year.value);
     resetGPAScale();
     changeMode();
 });
 export async function changeYear(year) {
-    const json = await (await fetch(`../years/${year}.json`)).json();
+    const json = await (await fetch(`./years/${year}.json`)).json();
     gpaScale = json["gpa scale"];
     gradeLevels = json["grade levels"];
 }

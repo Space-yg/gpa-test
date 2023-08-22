@@ -1,14 +1,14 @@
 import { createGrade } from "./create.js";
 import { calculateCGPA, changeTranscript } from "./calculate.js";
 const year = document.querySelector("select#year");
-const json = await (await fetch(`./years/${year.value}.json`)).json();
+const json = await (await fetch(`../years/${year.value}.json`)).json();
 year.addEventListener("change", async () => {
     await changeYear(year.value);
     resetGPAScale();
     changeMode();
 });
 export async function changeYear(year) {
-    const json = await (await fetch(`./years/${year}.json`)).json();
+    const json = await (await fetch(`../years/${year}.json`)).json();
     gpaScale = json["gpa scale"];
     gradeLevels = json["grade levels"];
 }
@@ -143,14 +143,14 @@ async function changeMode() {
     if (mode.value === "report card") {
         gradesDiv.style.gridTemplateColumns = "1fr";
         gradesLevels.hidden = false;
-        gradesLevels.previousElementSibling.hidden = false;
+        gradesLevels.parentElement.hidden = false;
         cgpaTable.hidden = true;
         const table = createGrade(startGrade, year.value, startSystem, startWeight);
         gradesDiv.appendChild(table);
     }
     else if (mode.value === "transcript") {
         gradesLevels.hidden = true;
-        gradesLevels.previousElementSibling.hidden = true;
+        gradesLevels.parentElement.hidden = true;
         cgpaTable.hidden = false;
         let subtractYears = 3;
         for (const grade in gradeLevels) {

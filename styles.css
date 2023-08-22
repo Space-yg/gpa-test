@@ -7,9 +7,8 @@ body {
 }
 
 /** Classes **/
-.text-align-left {
-    text-align: left;
-}
+.left { text-align: left; }
+.center { text-align: center; }
 
 /** Grades **/
 div.grades {

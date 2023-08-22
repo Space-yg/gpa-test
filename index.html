@@ -5,28 +5,38 @@
         <title>CIS GPA Calculator</title>
     </head>
     <body>
-        <!-- Mode -->
-        <label>Mode: </label>
-        <select id="mode">
-            <option value="report card" selected>Report Card</option>
-            <option value="transcript">Transcript</option>
-        </select>
-        <br>
+        <br><br>
 
-        <!-- Year -->
-        <label>Year</label>
-        <select id="year">
-            <option selected value="2023">2023</option>
-            <option value="2022">2022</option>
-            <option value="2021">2021</option>
-            <option value="2020">2020</option>
-        </select>
-        <br>
-
-        <!-- Grades Select Menu -->
-        <label>Grade: </label>
-        <select id="gradesLevels"></select>
-        <br>
+        <div class="center">
+            <!-- Mode -->
+            <label>
+                Mode
+                <select id="mode">
+                    <option value="report card" selected>Report Card</option>
+                    <option value="transcript">Transcript</option>
+                </select>
+            </label>
+            <br><br>
+    
+            <!-- Year -->
+            <label>
+                Year
+                <select id="year">
+                    <option selected value="2023">2023</option>
+                    <option value="2022">2022</option>
+                    <option value="2021">2021</option>
+                    <option value="2020">2020</option>
+                </select>
+            </label>
+            <br><br>
+    
+            <!-- Grades Select Menu -->
+            <label>
+                Grade
+                <select id="gradesLevels"></select>
+                <br><br>
+            </label>
+        </div>
 
         <!-- Grades -->
         <div style="grid-template-columns: 1fr;" class="grades" id="grades"></div>

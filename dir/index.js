@@ -8,7 +8,7 @@ year.addEventListener("change", async () => {
     changeMode();
 });
 export async function changeYear(year) {
-    const json = await (await fetch(`../years/${year}.json`)).json();
+    const json = await (await fetch(`./years/${year}.json`)).json();
     gpaScale = json["gpa scale"];
     gradeLevels = json["grade levels"];
 }

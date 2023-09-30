@@ -65,34 +65,35 @@ export const SessionsNames = {
     3: "Trimester",
     4: "Quarter",
 };
-const transcript = {};
-for (const grade in gradeLevels) {
-    transcript[parseInt(grade)] = {
-        qualityPoints: 0,
-        extraQualityPoints: 0,
-        credits: 0,
-    };
-    gradeLevels[grade].forEach(session => {
-        if (typeof session === "string") {
-            gradeLevels[grade][parseInt(session)].forEach(subject => {
-                const data = subject[Object.keys(subject)[0]];
-                transcript[parseInt(grade)].credits += data.credits;
-                transcript[parseInt(grade)].qualityPoints += 4 * data.credits;
-                transcript[parseInt(grade)].extraQualityPoints += weightToGPA[data.type];
-            });
-        }
-        else {
-            session.forEach(subject => {
-                const data = subject[Object.keys(subject)[0]];
-                transcript[parseInt(grade)].credits += data.credits;
-                transcript[parseInt(grade)].qualityPoints += 4 * data.credits;
-                transcript[parseInt(grade)].extraQualityPoints += weightToGPA[data.type];
-            });
-        }
-    });
+function resetTranscript() {
+    const transcript = {};
+    for (const grade in gradeLevels) {
+        transcript[parseInt(grade)] = {
+            qualityPoints: 0,
+            extraQualityPoints: 0,
+            credits: 0,
+        };
+        gradeLevels[grade].forEach(session => {
+            if (typeof session === "string") {
+                gradeLevels[grade][parseInt(session)].forEach(subject => {
+                    const data = subject[Object.keys(subject)[0]];
+                    transcript[parseInt(grade)].credits += data.credits;
+                    transcript[parseInt(grade)].qualityPoints += 4 * data.credits;
+                    transcript[parseInt(grade)].extraQualityPoints += weightToGPA[data.type];
+                });
+            }
+            else {
+                session.forEach(subject => {
+                    const data = subject[Object.keys(subject)[0]];
+                    transcript[parseInt(grade)].credits += data.credits;
+                    transcript[parseInt(grade)].qualityPoints += 4 * data.credits;
+                    transcript[parseInt(grade)].extraQualityPoints += weightToGPA[data.type];
+                });
+            }
+        });
+    }
+    changeTranscript(transcript);
 }
-console.log(transcript);
-changeTranscript(transcript);
 export const gradesDiv = document.querySelector("div#grades");
 export const mode = document.querySelector("select#mode");
 export const cgpaTable = document.querySelector("table#cgpa");
@@ -160,6 +161,7 @@ async function changeMode() {
             gradesDiv.appendChild(document.createElement("br"));
             subtractYears--;
         }
+        resetTranscript();
     }
 }
 mode.addEventListener("change", changeMode);

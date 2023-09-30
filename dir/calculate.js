@@ -42,8 +42,9 @@ export async function calculateGPA(table) {
                     sessionQualityPoints[i] += letterToGPA[selects[i].value] * credit;
                 }
                 else {
-                    for (const min in percentageToGPA) {
-                        if (inputs[i].value >= min) {
+                    const mins = Object.keys(percentageToGPA).map(string => parseFloat(string)).sort((a, b) => b - a);
+                    for (const min of mins) {
+                        if (parseFloat(inputs[i].value) >= min) {
                             sessionQualityPoints[i] += percentageToGPA[min] * credit;
                             break;
                         }
@@ -68,8 +69,9 @@ export async function calculateGPA(table) {
                     sessionQualityPoints[i] += letterToGPA[selects[i].value] * credit;
                 }
                 else {
-                    for (const min in percentageToGPA) {
-                        if (inputs[i].value >= min) {
+                    const mins = Object.keys(percentageToGPA).map(string => parseFloat(string)).sort((a, b) => b - a);
+                    for (const min of mins) {
+                        if (parseFloat(inputs[i].value) >= min) {
                             sessionQualityPoints[i] += percentageToGPA[min] * credit;
                             break;
                         }

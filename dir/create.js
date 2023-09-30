@@ -240,7 +240,7 @@ function addUnknownSubject(table, sessionTable, sessions) {
         });
         input.addEventListener("keydown", event => {
             NumberInputOnKeydown(event, input);
-            if (event.key in ["ArrowUp", "ArrowDown"])
+            if (event.key === "ArrowUp" || event.key === "ArrowDown")
                 calculateGPA(table);
         });
         tr.cells[sessions + 2].appendChild(input);
@@ -276,7 +276,7 @@ function createGradeInputTd(table, system) {
             input.value = "100";
         else
             NumberInputOnKeydown(event, input);
-        if (event.key in ["ArrowUp", "ArrowDown"])
+        if (event.key === "ArrowUp" || event.key === "ArrowDown")
             calculateGPA(table);
     });
     input.value = "100";
